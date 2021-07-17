@@ -10,9 +10,11 @@ body{
 
 #main{
     background-color: white;
+    height: 800px;
     margin-left: 80px;
     margin-right: 80px;
-    margin-top, margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #header{
