@@ -4,19 +4,23 @@
 }
 
 body{
-    background-color: lightslategray;
+    background-color: rgb(206, 206, 206);
     text-align: center;
 }
 
 #main{
     background-color: white;
-    height: 800px;
-    margin-left: 80px;
-    margin-right: 80px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    height: 30cm;
+    width: 21cm;
+    margin: 2% auto;
+    position: relative;
 }
 
-#header{
+#main .pierwszy{
+    padding-top: 10px;
+    color: red;
+}
+
+#main .header{
     color: red;
 }
