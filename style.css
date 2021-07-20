@@ -79,3 +79,15 @@ footer{
     bottom: 0px;
     position: fixed;
 }
+
+.imie{
+    animation-name: imie;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes imie {
+    from {color: white;}
+    50% {color: yellow;}
+    to {color: white;}
+}
