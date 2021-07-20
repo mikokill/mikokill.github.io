@@ -78,16 +78,27 @@ footer{
     width: 100%;
     bottom: 0px;
     position: fixed;
+    animation-name: imie1;
+    animation-delay: 5s;
+    animation-iteration-count: 5;
+    animation-duration: 3s;
 }
 
 .imie{
     animation-name: imie;
-    animation-iteration-count: infinite;
-    animation-duration: 2s;
+    animation-delay: 5s;
+    animation-iteration-count: 5;
+    animation-duration: 3s;
 }
 
 @keyframes imie {
     from {color: white;}
-    50% {color: yellow;}
+    50% {color: yellow; font-weight: bold; font-size: 1.1em;}
+    to {color: white;}
+}
+
+@keyframes imie1 {
+    from {color: white;}
+    50% {color: white; font-weight: bold; font-size: 1.1em;}
     to {color: white;}
 }
