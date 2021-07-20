@@ -9,10 +9,41 @@
     </head>
     <body>
         <div id="main">
-            <h1 class="pierwszy">Welcome</h1><br>
-            <h2 class="header">The page is under maintenance.</h2>
-            <h3 class="header">Come back soon!</h3>
-            <p class="waving_hand" onclick="colors()">&#128075;</p>
+            <h1 class="srodek pierwszy cien" onclick="document.getElementsByClassName('przycisk1')[0].style.display='inline-block'" title="Click me!">Witamy</h1><br>
+            <button class="srodek przycisk1" onclick="document.getElementById('id01').style.display='block'">Zaloguj</button>
+            <div id="id01" class="modal">
+                <form class="modal-content animate" action="/action_page.php" method="post">
+                    <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Zamknij">&times;</span>
+                    <img src="favicon.png" alt="Avatar" class="avatar">
+                    </div>
+                    <div class="container">
+                    <label for="uname"><b>Nazwa użytkownika</b></label>
+                    <input type="text" placeholder="Podaj nazwę użytkownika" name="uname" required>
+                    <label for="psw"><b>Hasło</b></label>
+                    <input type="password" placeholder="Podaj hasło" name="psw" required>
+                    <button class="przycisk2" type="submit">Zaloguj</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Zapamiętaj mnie
+                    </label>
+                    </div>
+                    <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Anuluj</button>
+                    <span class="psw">Zapomniane <a href="#" class="passwd">hasło?</a></span>
+                    </div>
+                </form>
+            </div>
+            <script>
+                var modal = document.getElementById('id01');
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
+            <h2 class="header srodek cien">Strona jest w trakcie przebudowy.</h2>
+            <h3 class="header srodek cien">Zapraszamy później!</h3>
+            <div class="waving_hand srodek" onclick="colors()">&#128075;</div>
             <script>
                 function getRandomColor() {
                     var letters = '0123456789ABCDEF';
@@ -22,6 +53,7 @@
                     }
                     return color;
                 }
+
                 function colors(){
                     document.getElementById('main').style.boxShadow="none";
                     for(x=0;x<10;x++){
@@ -31,7 +63,7 @@
             </script>
         </div>
         <footer>
-            <p>Created with love by: <a class="imie">Mikołaj Szubert</a></p>
+            <p class="srodek">Created with love by: <a class="imie">Mikołaj Szubert</a></p>
         </footer>
     </body>
 </html>
