@@ -16,6 +16,7 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    cursor: text;
 }
 
 img.avatar {
@@ -175,7 +176,7 @@ footer::-moz-selection{
     background-color: #fefefe;
     margin: 5% auto 15% auto;
     border: 1px solid #888;
-    width: 50%;
+    width: 70%;
 }
 
 .close {
