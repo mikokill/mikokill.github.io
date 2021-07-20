@@ -68,13 +68,16 @@ footer::-moz-selection{
 }
 
 #main .pierwszy{
-    margin-top: 5em;
     font-size: 3em;
     color: red;
     font-family: 'Permanent Marker', cursive;
     width: fit-content;
     height: fit-content;
-    margin: auto;
+    margin: 0px auto;
+}
+
+h1.pierwszy {
+    margin-top: 20px;
 }
 
 #main .header{
@@ -86,16 +89,12 @@ footer::-moz-selection{
 #main .pierwszy:hover{
     box-shadow: 0px 3px 8px 2px black;
     -webkit-box-shadow: 0px 3px 8px 2px black;
-    transform: translateY(5px);
-    background-color: cornflowerblue;
+    background-color: rgba(100, 148, 237, 0.315);
+    border-radius: 20px;
 }
 
 #id01{
     text-align: left;
-}
-
-.srodek{
-    text-align: center;
 }
 
 .przycisk1{
@@ -250,7 +249,24 @@ footer::-moz-selection{
     }
 }
 
-@media (min-height: 30cm) {
+@media screen and (min-height: 30cm) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+    #main {
+        height: max-height;
+        width: 100%;
+        margin: 0px;
+        box-shadow: 0px;
+        -webkit-box-shadow: 0px;
+    }
+}
+
+@media screen and (orientation: portrait){
     span.psw {
         display: block;
         float: none;
