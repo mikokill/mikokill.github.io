@@ -26,6 +26,7 @@ body{
     font-size: 3em;
     color: red;
     font-family: 'Permanent Marker', cursive;
+    width: fit-content;
     
 }
 
