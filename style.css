@@ -172,12 +172,12 @@ h1.pierwszy {
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
-    padding: auto;
+    padding: 50px;
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto 15% auto;
+    margin: auto;
     border: 1px solid #888;
     width: 70%;
 }
