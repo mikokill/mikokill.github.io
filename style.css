@@ -236,7 +236,24 @@ h1.pierwszy {
     animation-fill-mode: forwards;
 }
 
-@media screen and (orientation: portait), (max-width: 21.5cm), (min-height: 30cm){
+@media screen and (max-width: 21.5cm), (min-height: 30cm){
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+    #main {
+        height: max-height;
+        width: 100%;
+        margin: 0px;
+        box-shadow: 0px;
+        -webkit-box-shadow: 0px;
+    }
+}
+
+@media screen and (orientation: portait){
     span.psw {
         display: block;
         float: none;
