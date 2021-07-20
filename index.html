@@ -12,7 +12,23 @@
             <h1 class="pierwszy">Welcome</h1><br>
             <h2 class="header">The page is under maintenance.</h2>
             <h3 class="header">Come back soon!</h3>
-            <p class="waving_hand">&#128075;</p>
+            <p class="waving_hand" onclick="colors()">&#128075;</p>
+            <script>
+                function getRandomColor() {
+                    var letters = '0123456789ABCDEF';
+                    var color = '#';
+                    for (var i = 0; i < 6; i++) {
+                        color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    return color;
+                }
+                function colors(){
+                    document.getElementById('main').style.boxShadow="none";
+                    for(x=0;x<10;x++){
+                        document.body.style.backgroundColor=getRandomColor();
+                    }
+                }
+            </script>
         </div>
         <footer>
             <p>Created with love by: <a class="imie">Mikołaj Szubert</a></p>

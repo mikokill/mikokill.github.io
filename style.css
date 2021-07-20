@@ -19,6 +19,9 @@ body{
     animation-name: welcome;
     animation-duration: 2s;
     animation-fill-mode: forwards;
+    margin-bottom: 3%;
+    box-shadow: 4px 3px 8px 1px #969696;
+  	-webkit-box-shadow: 4px 3px 8px 1px #969696;
 }
 
 #main .pierwszy{
