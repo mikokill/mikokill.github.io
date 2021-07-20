@@ -10,75 +10,6 @@
     </head>
     <body>
         <div id="main">
-            <h1 class="srodek pierwszy cien" onclick="document.getElementsByClassName('przycisk1')[0].style.display='inline-block'" title="Click me!">Welcome</h1><br>
-            <button class="srodek przycisk1" onclick="document.getElementById('id01').style.display='block'">Sign in</button>
-            <div id="id01" class="modal">
-                <form class="modal-content animate" action="/action_page.php" method="post">
-                    <div class="imgcontainer">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
-                    <img src="favicon.png" alt="Avatar" class="avatar">
-                    </div>
-                    <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Type username" name="uname" required>
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Type password" name="psw" required>
-                    <button class="przycisk2" type="submit">Login</button>
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
-                    </div>
-                    <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="#" class="passwd">password?</a></span>
-                    </div>
-                </form>
-            </div>
-            <script>
-                var modal = document.getElementById('id01');
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                    }
-                }
-            </script>
-            <h2 class="header srodek cien">The website is in maintenance.</h2>
-            <h3 class="header srodek cien">Come back soon!</h3>
-            <div class="waving_hand srodek" onclick="colors()">&#128075;</div>
-            <script>
-                function getRandomColor() {
-                    var letters = '0123456789ABCDEF';
-                    var color = '#';
-                    for (var i = 0; i < 6; i++) {
-                        color += letters[Math.floor(Math.random() * 16)];
-                    }
-                    return color;
-                }
-
-                function colors(){
-                    document.getElementById('main').style.boxShadow="none";
-                    for(x=0;x<10;x++){
-                        document.body.style.backgroundColor=getRandomColor();
-                    }
-                }
-            </script>
-        </div>
-        <footer>
-            <p class="srodek">Created with love by: <a class="imie">Mikołaj Szubert</a></p>
-        </footer>
-    </body>
-</html><!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, height=device-height initial-scale=1">
-        <title>Home Page</title>
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&Ranga" />
-        <link rel="shortcut icon" type="image/png" href="favicon.png" />
-    </head>
-    <body>
-        <div id="main">
             <h1 class="pierwszy cien" onclick="document.getElementsByClassName('przycisk1')[0].style.display='inline-block'" title="Click me!">Welcome</h1><br>
             <button class="przycisk1" onclick="document.getElementById('id01').style.display='block'">Sign in</button>
             <div id="id01" class="modal">
@@ -133,7 +64,7 @@
             </script>
         </div>
         <footer>
-            <p>Created with love by: <a class="imie">Mikołaj Szubert</a></p>
+            <p class="srodek">Created with love by: <a class="imie">Mikołaj Szubert</a></p>
         </footer>
     </body>
 </html>

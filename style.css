@@ -113,6 +113,10 @@ h1.pierwszy {
     border-radius: 20px;
 }
 
+.srodek {
+    text-align: center;
+}
+
 .przycisk1:active{
     opacity: 0.8;
 }
