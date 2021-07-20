@@ -236,7 +236,7 @@ h1.pierwszy {
     animation-fill-mode: forwards;
 }
 
-@media screen and (max-width: 21.5cm), (min-height: 30cm), (orientation: portait){
+@media screen and (orientation: portait), (max-width: 21.5cm), (min-height: 30cm){
     span.psw {
         display: block;
         float: none;
