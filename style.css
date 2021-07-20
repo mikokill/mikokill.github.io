@@ -233,13 +233,37 @@ footer::-moz-selection{
     animation-fill-mode: forwards;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 21.5cm) {
     span.psw {
         display: block;
         float: none;
     }
     .cancelbtn {
         width: 100%;
+    }
+    #main {
+        height: max-height;
+        width: 100%;
+        margin: 0px;
+        box-shadow: 0px;
+        -webkit-box-shadow: 0px;
+    }
+}
+
+@media (min-height: 30cm) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+    #main {
+        height: max-height;
+        width: 100%;
+        margin: 0px;
+        box-shadow: 0px;
+        -webkit-box-shadow: 0px;
     }
 }
 
