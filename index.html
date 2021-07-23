@@ -10,7 +10,7 @@
     </head>
     <body>
         <script type="text/javascript">
-            var x = false;
+            var isOpen = false;
         </script>
         <div id="main">
             <h1 class="pierwszy cien" onclick="open_close()" title="Click me!">Welcome</h1><br>
@@ -39,12 +39,13 @@
             </div>
             <script>
                 function open_close(){
-                    if(x==true){
+                    if (isOpen == true) {
                         document.getElementsByClassName('przycisk1')[0].style.display='none';
-                        x=false;
-                    }else{
+                        isOpen = false;
+                    }
+                    else {
                         document.getElementsByClassName('przycisk1')[0].style.display='inline-block';
-                        x=true;
+                        isOpen = true;
                     }
                 }
 
