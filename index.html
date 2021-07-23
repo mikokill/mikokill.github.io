@@ -9,83 +9,85 @@
         <link rel="shortcut icon" type="image/png" href="favicon.png" />
     </head>
     <body>
-        <script type="text/javascript">
-            var isOpen = false;
-        </script>
-        <div id="main">
-            <h1 class="pierwszy cien disable-select" onclick="open_close()" title="Click me!">Welcome</h1><br>
-            <button class="przycisk1 disable-select" onclick="openModal()">Sign in</button>
-            <div id="id01" class="modal">
-                <form class="modal-content animate" action="/action_page.php" method="post">
-                    <div class="imgcontainer disable-select">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="close disable-select" title="Close">&times;</span>
-                        <img src="favicon.png" alt="Avatar" class="avatar disable-select">
-                    </div>
-                    <div class="container">
-                        <label class="disable-select" for="uname"><b>Username</b></label>
-                        <input type="text" placeholder="Type username" name="uname" required>
+        <div id="body" onclick="colors()">
+            <script type="text/javascript">
+                var isOpen = false;
+            </script>
+            <div id="main">
+                <h1 class="pierwszy cien disable-select" onclick="open_close()" title="Click me!">Welcome</h1><br>
+                <button class="przycisk1 disable-select" onclick="openModal()">Sign in</button>
+                <div id="id01" class="modal">
+                    <form class="modal-content animate" action="/action_page.php" method="post">
+                        <div class="imgcontainer disable-select">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close disable-select" title="Close">&times;</span>
+                            <img src="favicon.png" alt="Avatar" class="avatar disable-select">
+                        </div>
+                        <div class="container">
+                            <label class="disable-select" for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Type username" name="uname" required>
 
-                        <label class="disable-select" for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Type password" name="psw" required>
+                            <label class="disable-select" for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Type password" name="psw" required>
 
-                        <button class="przycisk2 disable-select" type="submit">Login</button>
-                        <label class="disable-select">
-                            <input type="checkbox" checked="checked" name="remember"> Remember me
-                        </label>
-                    </div>
-                    <div class="container disable-select" style="background-color:#f1f1f1">
-                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                        <span class="psw">Forgot <a href="#" class="passwd">password?</a></span>
-                    </div>
-                </form>
-            </div>
-            <script>
-                function open_close(){
-                    if (isOpen == true) {
+                            <button class="przycisk2 disable-select" type="submit">Login</button>
+                            <label class="disable-select">
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+                        <div class="container disable-select" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                            <span class="psw">Forgot <a href="#" class="passwd">password?</a></span>
+                        </div>
+                    </form>
+                </div>
+                <script>
+                    function open_close(){
+                        if (isOpen == true) {
+                            document.getElementsByClassName('przycisk1')[0].style.display='none';
+                            isOpen = false;
+                        }
+                        else {
+                            document.getElementsByClassName('przycisk1')[0].style.display='inline-block';
+                            isOpen = true;
+                        }
+                    }
+
+                    function openModal() {
+                        document.getElementById("id01").style.display="block";
                         document.getElementsByClassName('przycisk1')[0].style.display='none';
                         isOpen = false;
                     }
-                    else {
-                        document.getElementsByClassName('przycisk1')[0].style.display='inline-block';
-                        isOpen = true;
+                    var modal = document.getElementById('id01');
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
                     }
-                }
+                </script>
+                <h2 class="header cien disable-select">The website is in maintenance.</h2>
+                <h3 class="header cien disable-select">Come back soon!</h3>
+                <div class="waving_hand srodek disable-select" onclick="colors()">&#128075;</div>
+                <script>
+                    function getRandomColor() {
+                        var letters = '0123456789ABCDEF';
+                        var color = '#';
+                        for (var i = 0; i < 6; i++) {
+                            color += letters[Math.floor(Math.random() * 16)];
+                        }
+                        return color;
+                    }
 
-                function openModal() {
-                    document.getElementById("id01").style.display="block";
-                    document.getElementsByClassName('przycisk1')[0].style.display='none';
-                    isOpen = false;
-                }
-                var modal = document.getElementById('id01');
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
+                    function colors(){
+                        document.getElementById('main').style.boxShadow="none";
+                        for(x=0;x<10;x++){
+                            document.getElementById('body').style.backgroundColor=getRandomColor();
+                        }
                     }
-                }
-            </script>
-            <h2 class="header cien disable-select">The website is in maintenance.</h2>
-            <h3 class="header cien disable-select">Come back soon!</h3>
-            <div class="waving_hand srodek disable-select" onclick="colors()">&#128075;</div>
-            <script>
-                function getRandomColor() {
-                    var letters = '0123456789ABCDEF';
-                    var color = '#';
-                    for (var i = 0; i < 6; i++) {
-                        color += letters[Math.floor(Math.random() * 16)];
-                    }
-                    return color;
-                }
-
-                function colors(){
-                    document.getElementById('main').style.boxShadow="none";
-                    for(x=0;x<10;x++){
-                        document.body.style.backgroundColor=getRandomColor();
-                    }
-                }
-            </script>
+                </script>
+            </div>
+            <footer>
+                <p class="srodek disable-select">Created with love by: <a class="imie">Mikołaj Szubert</a></p>
+            </footer>
         </div>
-        <footer>
-            <p class="srodek disable-select">Created with love by: <a class="imie">Mikołaj Szubert</a></p>
-        </footer>
     </body>
 </html>
