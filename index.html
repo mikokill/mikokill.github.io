@@ -9,8 +9,11 @@
         <link rel="shortcut icon" type="image/png" href="favicon.png" />
     </head>
     <body>
+        <script type="text/javascript">
+            var x = false;
+        </script>
         <div id="main">
-            <h1 class="pierwszy cien" onclick="document.getElementsByClassName('przycisk1')[0].style.display='inline-block'" title="Click me!">Welcome</h1><br>
+            <h1 class="pierwszy cien" onclick="open_close()" title="Click me!">Welcome</h1><br>
             <button class="przycisk1" onclick="document.getElementById('id01').style.display='block'">Sign in</button>
             <div id="id01" class="modal">
                 <form class="modal-content animate" action="/action_page.php" method="post">
@@ -35,6 +38,16 @@
                 </form>
             </div>
             <script>
+                function open_close(){
+                    if(x==true){
+                        document.getElementsByClassName('przycisk1')[0].style.display='none';
+                        x=false;
+                    }else{
+                        document.getElementsByClassName('przycisk1')[0].style.display='inline-block';
+                        x=true;
+                    }
+                }
+
                 var modal = document.getElementById('id01');
                 window.onclick = function(event) {
                     if (event.target == modal) {
