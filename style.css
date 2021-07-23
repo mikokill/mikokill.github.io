@@ -87,10 +87,7 @@ h1.pierwszy {
 }
 
 #main .pierwszy:hover{
-    box-shadow: 0px 3px 8px 2px black;
-    -webkit-box-shadow: 0px 3px 8px 2px black;
-    background-color: rgba(100, 148, 237, 0.315);
-    border-radius: 20px;
+    font-size: 3.1em;
 }
 
 #id01{
