@@ -94,6 +94,13 @@ h1.pierwszy {
     text-align: left;
 }
 
+.disable-select{
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
 .przycisk1{
     background: rgb(91,2,184);
     background: linear-gradient(25deg, rgba(91,2,184,1) 0%, rgba(158,81,236,1) 48%, rgba(92,173,255,1) 100%);

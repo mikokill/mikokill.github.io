@@ -13,27 +13,29 @@
             var isOpen = false;
         </script>
         <div id="main">
-            <h1 class="pierwszy cien" onclick="open_close()" title="Click me!">Welcome</h1><br>
-            <button class="przycisk1" onclick="openModal()">Sign in</button>
+            <h1 class="pierwszy cien disable-select" onclick="open_close()" title="Click me!">Welcome</h1><br>
+            <button class="przycisk1 disable-select" onclick="openModal()">Sign in</button>
             <div id="id01" class="modal">
                 <form class="modal-content animate" action="/action_page.php" method="post">
-                    <div class="imgcontainer">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
-                    <img src="favicon.png" alt="Avatar" class="avatar">
+                    <div class="imgcontainer disable-select">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close disable-select" title="Close">&times;</span>
+                        <img src="favicon.png" alt="Avatar" class="avatar disable-select">
                     </div>
                     <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Type username" name="uname" required>
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Type password" name="psw" required>
-                    <button class="przycisk2" type="submit">Login</button>
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Type username" name="uname" required>
+
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Type password" name="psw" required>
+
+                        <button class="przycisk2" type="submit">Login</button>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
                     </div>
-                    <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="#" class="passwd">password?</a></span>
+                    <div class="container disable-select" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#" class="passwd">password?</a></span>
                     </div>
                 </form>
             </div>
@@ -61,9 +63,9 @@
                     }
                 }
             </script>
-            <h2 class="header cien">The website is in maintenance.</h2>
-            <h3 class="header cien">Come back soon!</h3>
-            <div class="waving_hand srodek" onclick="colors()">&#128075;</div>
+            <h2 class="header cien disable-select">The website is in maintenance.</h2>
+            <h3 class="header cien disable-select">Come back soon!</h3>
+            <div class="waving_hand srodek disable-select" onclick="colors()">&#128075;</div>
             <script>
                 function getRandomColor() {
                     var letters = '0123456789ABCDEF';
@@ -83,7 +85,7 @@
             </script>
         </div>
         <footer>
-            <p class="srodek">Created with love by: <a class="imie">Mikołaj Szubert</a></p>
+            <p class="srodek disable-select">Created with love by: <a class="imie">Mikołaj Szubert</a></p>
         </footer>
     </body>
 </html>
