@@ -14,7 +14,7 @@
         </script>
         <div id="main">
             <h1 class="pierwszy cien" onclick="open_close()" title="Click me!">Welcome</h1><br>
-            <button class="przycisk1" onclick="document.getElementById('id01').style.display='block'">Sign in</button>
+            <button class="przycisk1" onclick="openModal()">Sign in</button>
             <div id="id01" class="modal">
                 <form class="modal-content animate" action="/action_page.php" method="post">
                     <div class="imgcontainer">
@@ -49,6 +49,11 @@
                     }
                 }
 
+                function openModal() {
+                    document.getElementById("id01").style.display="block";
+                    document.getElementsByClassName('przycisk1')[0].style.display='none';
+                    isOpen = false;
+                }
                 var modal = document.getElementById('id01');
                 window.onclick = function(event) {
                     if (event.target == modal) {
