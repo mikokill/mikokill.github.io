@@ -258,6 +258,9 @@ h1.pierwszy {
         box-shadow: 0px;
         -webkit-box-shadow: 0px;
     }
+    .modal-content {
+        width: 90%;
+    }
 }
 
 @keyframes welcome {
