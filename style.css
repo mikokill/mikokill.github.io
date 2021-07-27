@@ -258,8 +258,12 @@ h1.pierwszy {
         box-shadow: 0px;
         -webkit-box-shadow: 0px;
     }
+    .modal {
+        padding: 10px;
+    }
+    }
     .modal-content {
-        width: 90%;
+        width: 100%;
     }
 }
 
