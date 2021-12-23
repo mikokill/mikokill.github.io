@@ -73,10 +73,12 @@
                 if(interval){
                     interval = false;
                     clearInterval(myInterval);
+                    document.getElementsByClassName("loader")[0].classList.add("paused");
                 }
                 else{
                     interval = true;
                     myInterval = setInterval(changeBgColor, 10);
+                    document.getElementsByClassName("loader")[0].classList.remove("paused");
                 }
             }, false); 
         </script>
