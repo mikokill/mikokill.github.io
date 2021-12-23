@@ -51,8 +51,11 @@
             }
             
             document.addEventListener("dblclick", toggleFullScreen);
-            document.addEventListener('click', toggleAnimation);
-            document.getElementById('animationButton').addEventListener('click', toggleFullScreen);
+            document.body.addEventListener('click', toggleAnimation);
+            document.getElementById('animationButton').addEventListener('click', function(){
+                toggleFullScreen();
+                toggleAnimation();
+            });
             
         </script>
     </body>
