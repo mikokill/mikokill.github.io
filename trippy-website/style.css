@@ -23,21 +23,6 @@ body
     animation: animate 0.5s linear infinite;
     float: right;
 }
-.paused
-{
-    animation-play-state: paused;
-}
-.paused::after
-{
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    background: #202020;
-    border-radius: 50%;
-}
 @keyframes animate
 {
     0%
@@ -98,4 +83,19 @@ body
         right: 100px;
         bottom: 100px;
     }
+}
+.paused
+{
+    animation-play-state: paused;
+}
+.paused::after
+{
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #202020;
+    border-radius: 50%;
 }
