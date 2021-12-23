@@ -27,6 +27,10 @@ body
 {
     animation-play-state: paused;
 }
+.paused::after
+{
+    animation-play-state: paused;
+}
 @keyframes animate
 {
     0%
@@ -63,7 +67,7 @@ body
 {
     filter: blur(50px);
 }
-.loader:after{
+.loader::after{
     content: '';
     position: absolute;
     top: 20px;
