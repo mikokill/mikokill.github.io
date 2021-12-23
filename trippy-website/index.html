@@ -18,7 +18,7 @@
     <script type="text/javascript">
         function getRndInteger(min, max) {
             return Math.floor(Math.random() * (max - min + 1) ) + min;
-        }
+        } 
         function changeBgColor(){
             let hex = getRndInteger(100000, 999999);
             let hexString = "#"+hex.toString();
@@ -26,6 +26,7 @@
         }
         const elem = document.documentElement;
         let fullScreen = false;
+        let interval = true;
         function openFullscreen() {
           if (elem.requestFullscreen) {
             elem.requestFullscreen();
@@ -36,6 +37,7 @@
             elem.msRequestFullscreen();
           }
         }
+        let myInterval = setInterval(changeBgColor, 10);
         document.getElementById('page').addEventListener("click", function(){
             if(!fullScreen){
                 openFullscreen();
@@ -43,13 +45,21 @@
             else{
                 document.exitFullscreen();
                 fullScreen = false;
-            }
+            } 
             
         });
-        document.getElementById('page').addEventListener("dblclick", function(){
-            window.location = "../";
+        document.addEventListener('keydown', function(e){
+            if(e.code == "Space"){
+                if(interval){
+                    interval = false;
+                    clearInterval(myInterval);
+                }
+                else{
+                     interval = true;
+                    myInterval = setInterval(changeBgColor, 10);
+                }
+            }
         });
-        setInterval(changeBgColor, 10);
     </script>
 </body>
 </html>
