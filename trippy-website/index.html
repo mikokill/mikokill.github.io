@@ -1,65 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Trippy website</title>
-<meta name="viewport" content="width=device-width, height=device-height initial-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-    <div id="page">
-        <div class="loader">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+    <head>
+        <title>Trippy website</title>
+        <meta name="viewport" content="width=device-width, height=device-height initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="page">
+            <div class="loader">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-    </div>
-    <script type="text/javascript">
-        function getRndInteger(min, max) {
-            return Math.floor(Math.random() * (max - min + 1) ) + min;
-        } 
-        function changeBgColor(){
-            let hex = getRndInteger(100000, 999999);
-            let hexString = "#"+hex.toString();
-            document.getElementById('page').style.backgroundColor = hexString;
-        }
-        const elem = document.documentElement;
-        let fullScreen = false;
-        let interval = true;
-        function openFullscreen() {
-          if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-            fullScreen = true;
-          } else if (elem.webkitRequestFullscreen) {
-            elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) {
-            elem.msRequestFullscreen();
-          }
-        }
-        let myInterval = setInterval(changeBgColor, 10);
-        document.getElementById('page').addEventListener("click", function(){
-            if(!fullScreen){
-                openFullscreen();
-            }
-            else{
-                document.exitFullscreen();
-                fullScreen = false;
+        <script src="shake.js"></script>
+        <script type="text/javascript">
+            function getRndInteger(min, max) {
+                return Math.floor(Math.random() * (max - min + 1) ) + min;
             } 
-            
-        });
-        document.addEventListener('keydown', function(e){
-            if(e.code == "Space"){
+            function changeBgColor(){
+                let hex = getRndInteger(100000, 999999);
+                let hexString = "#"+hex.toString();
+                document.getElementById('page').style.backgroundColor = hexString;
+            }
+            const elem = document.documentElement;
+            let fullScreen = false;
+            let interval = true;
+            function openFullscreen() {
+              if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+                fullScreen = true;
+              } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+              } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+              }
+            }
+            let myInterval = setInterval(changeBgColor, 10);
+            document.getElementById('page').addEventListener("click", function(){
+                if(!fullScreen){
+                    openFullscreen();
+                }
+                else{
+                    document.exitFullscreen();
+                    fullScreen = false;
+                } 
+
+            });
+            document.addEventListener('keydown', function(e){
+                if(e.code == "Space"){
+                    if(interval){
+                        interval = false;
+                        clearInterval(myInterval);
+                    }
+                    else{
+                        interval = true;
+                        myInterval = setInterval(changeBgColor, 10);
+                    }
+                }
+            });
+            var myShakeEvent = new Shake();
+
+            // Start listening to device motion
+            myShakeEvent.start(); 
+
+            // Register a shake event listener on window with your callback
+            window.addEventListener('shake', function(){
                 if(interval){
                     interval = false;
                     clearInterval(myInterval);
                 }
                 else{
-                     interval = true;
+                    interval = true;
                     myInterval = setInterval(changeBgColor, 10);
                 }
-            }
-        });
-    </script>
-</body>
+            }, false); 
+        </script>
+    </body>
 </html>
