@@ -12,30 +12,16 @@
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </div><br>
+        <div id="animationButton"></div>
         <script type="text/javascript">
-            function getRndInteger(min, max) {
-                return Math.floor(Math.random() * (max - min + 1) ) + min;
-            } 
-            function changeBgColor(){
-                let hex = getRndInteger(100000, 999999);
-                let hexString = "#"+hex.toString();
-                document.body.style.backgroundColor = hexString;
-            }
+            
             let fullScreen = false;
             let interval = true;
+            
             let myInterval = setInterval(changeBgColor, 10);
-            document.addEventListener("dblclick", function(){
-                if(!fullScreen){
-                    document.documentElement.requestFullscreen();
-                    fullScreen = true;
-                }
-                else{
-                    document.exitFullscreen();
-                    fullScreen = false;
-                }
-            });
-            document.addEventListener('click', function(){
+            
+            function toggleAnimation(){
                 if(interval){
                     interval = false;
                     clearInterval(myInterval);
@@ -46,7 +32,28 @@
                     myInterval = setInterval(changeBgColor, 10);
                     document.getElementsByClassName("loader")[0].classList.remove("paused");
                 }
-            });
+            }
+            function toggleFullScreen(){
+                if(!fullScreen){
+                    document.documentElement.requestFullscreen();
+                    fullScreen = true;
+                }
+                
+                else{
+                    document.exitFullscreen();
+                    fullScreen = false;
+                }
+            }
+            function changeBgColor(){
+                let hex = Math.floor(Math.random() * (999999 - 100000 + 1) ) + 100000; 
+                let hexString = "#"+hex.toString();
+                document.body.style.backgroundColor = hexString;
+            }
+            
+            document.addEventListener("dblclick", toggleFullScreen);
+            document.addEventListener('click', toggleAnimation);
+            document.getElementById('animationButton').addEventListener('click', toggleFullScreen);
+            
         </script>
     </body>
 </html>
