@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Animated Glowing Gradient Loader</title>
-<!--  JQuery  -->
+<title>Trippy website</title>
+<meta name="viewport" content="width=device-width, height=device-height initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -41,10 +41,13 @@
                 openFullscreen();
             }
             else{
-                history.back();
-                elem.exitFullscreen();
+                document.exitFullscreen();
+                fullScreen = false;
             }
             
+        });
+        document.getElementById('page').addEventListener("dblclick", function(){
+            window.location = "../";
         });
         setInterval(changeBgColor, 10);
     </script>
