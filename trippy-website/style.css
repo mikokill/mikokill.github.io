@@ -2,8 +2,6 @@ body
 {
     margin: 0;
     padding: 0;
-}
-#page{
     height: 100%;
     width: 100%;
     display: flex;
@@ -14,14 +12,20 @@ body
 }
 .loader
 {
-    display: block;
-    position:fixed;
+    position: absolute;
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    background: 1inear-gradient(#14ffe9, #ffeb3b, #ff00e0);
     animation: animate 0.5s linear infinite;
-    float: right;
+}
+.paused
+{
+    animation-play-state: paused;
+}
+.paused::after
+{
+    animation-play-state: paused;
 }
 @keyframes animate
 {
@@ -87,15 +91,4 @@ body
 .paused
 {
     animation-play-state: paused;
-}
-.paused::after
-{
-    content: 'no i chuj mnie to';
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    background: #202020;
-    border-radius: 50%;
 }
