@@ -25,23 +25,14 @@
                 let hexString = "#"+hex.toString();
                 document.getElementById('page').style.backgroundColor = hexString;
             }
-            const elem = document.documentElement;
             let fullScreen = false;
             let interval = true;
-            function openFullscreen() {
-              if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-                fullScreen = true;
-              } else if (elem.webkitRequestFullscreen) {
-                elem.webkitRequestFullscreen();
-              } else if (elem.msRequestFullscreen) {
-                elem.msRequestFullscreen();
-              }
             }
             let myInterval = setInterval(changeBgColor, 10);
             document.getElementById('page').addEventListener("click", function(){
                 if(!fullScreen){
-                    openFullscreen();
+                    document.documentElement.requestFullscreen();
+                    fullScreen = true;
                 }
                 else{
                     document.exitFullscreen();
