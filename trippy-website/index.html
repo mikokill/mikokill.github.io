@@ -54,7 +54,7 @@
                     if(interval){
                         interval = false;
                         clearInterval(myInterval);
-                        this.style.animationPlayState = 'paused';
+                        document.getElementsByClassName("loader")[0].style.animationPlayState = 'paused';
                     }
                     else{
                         interval = true;
