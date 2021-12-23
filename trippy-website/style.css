@@ -23,6 +23,10 @@ body
     animation: animate 0.5s linear infinite;
     float: right;
 }
+.paused
+{
+    animation-play-state: paused;
+}
 @keyframes animate
 {
     0%
