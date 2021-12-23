@@ -7,15 +7,12 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div id="page">
-            <div class="loader">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <script src="shake.js"></script>
         <script type="text/javascript">
             function getRndInteger(min, max) {
                 return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -23,12 +20,12 @@
             function changeBgColor(){
                 let hex = getRndInteger(100000, 999999);
                 let hexString = "#"+hex.toString();
-                document.getElementById('page').style.backgroundColor = hexString;
+                document.documentElement.style.backgroundColor = hexString;
             }
             let fullScreen = false;
             let interval = true;
             let myInterval = setInterval(changeBgColor, 10);
-            document.getElementById('page').addEventListener("click", function(){
+            document.addEventListener("dblclick", function(){
                 if(!fullScreen){
                     document.documentElement.requestFullscreen();
                     fullScreen = true;
@@ -36,30 +33,9 @@
                 else{
                     document.exitFullscreen();
                     fullScreen = false;
-                } 
-
-            });
-            document.addEventListener('keydown', function(e){
-                if(e.code == "Space"){
-                    if(interval){
-                        interval = false;
-                        clearInterval(myInterval);
-                        document.getElementsByClassName("loader")[0].classList.add("paused");
-                    }
-                    else{
-                        interval = true;
-                        myInterval = setInterval(changeBgColor, 10);
-                        document.getElementsByClassName("loader")[0].classList.remove("paused");
-                    }
                 }
             });
-            var myShakeEvent = new Shake();
-
-            // Start listening to device motion
-            myShakeEvent.start(); 
-
-            // Register a shake event listener on window with your callback
-            window.addEventListener('shake', function(){
+            document.addEventListener('click', function(){
                 if(interval){
                     interval = false;
                     clearInterval(myInterval);
@@ -70,7 +46,7 @@
                     myInterval = setInterval(changeBgColor, 10);
                     document.getElementsByClassName("loader")[0].classList.remove("paused");
                 }
-            }, false); 
+            });
         </script>
     </body>
 </html>
