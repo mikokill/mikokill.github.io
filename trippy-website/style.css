@@ -86,9 +86,9 @@ body
         bottom: 20px;
     }
     50%{
-        top: 150px;
-        left: 150px;
-        right: 150px;
-        bottom: 150px;
+        top: 100px;
+        left: 100px;
+        right: 100px;
+        bottom: 100px;
     }
 }
