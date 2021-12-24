@@ -36,11 +36,13 @@
             function toggleFullScreen(){
                 if(!fullScreen){
                     document.documentElement.requestFullscreen();
+                    document.documentElement.style.cursor = "none";
                     fullScreen = true;
                 }
                 
                 else{
                     document.exitFullscreen();
+                    document.documentElement.style.cursor = "auto";
                     fullScreen = false;
                 }
             }
